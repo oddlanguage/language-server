@@ -1,0 +1,1 @@
+max-by [x,...xs] = case xs of [] = 0, _ = max min tail 2;

@@ -1,7 +1,11 @@
 {
-	"name": "odd-lsp",
-	"description": "A Language Server for the Odd language",
-	"version": "1.0.0",
-	"author": "",
-	"license": "MIT"
+  "name": "odd-lsp",
+  "description": "A Language Server for the Odd language",
+  "version": "1.0.0",
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "odd": "github:oddlanguage/odd"
+  }
 }
