@@ -17,7 +17,11 @@ const initialize = (
 ): InitResult => ({
 	capabilities: {
 		completionProvider: {},
-		textDocumentSync: 1
+		textDocumentSync: 1,
+		diagnosticProvider: {
+			interFileDependencies: false,
+			workspaceDiagnostics: false
+		}
 	},
 	serverInfo: {
 		name: "odd-language-server",

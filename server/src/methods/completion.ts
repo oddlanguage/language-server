@@ -11,6 +11,7 @@ import {
 	logger,
 	type RequestMessage
 } from "../server.js";
+import { Position } from "../types.js";
 
 type CompletionItem = Readonly<{
 	label: string;
@@ -19,11 +20,6 @@ type CompletionItem = Readonly<{
 type CompletionList = Readonly<{
 	isIncomplete: boolean;
 	items: ReadonlyArray<CompletionItem>;
-}>;
-
-type Position = Readonly<{
-	line: number;
-	character: number;
 }>;
 
 type TextDocumentCompletionMessage = RequestMessage<{

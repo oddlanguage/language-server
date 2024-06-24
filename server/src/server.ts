@@ -1,6 +1,8 @@
 import { create } from "./logger.js";
 import completion from "./methods/completion.js";
+import diagnostic from "./methods/diagnostic.js";
 import didChange from "./methods/did-change.js";
+import didOpen from "./methods/did-open.js";
 import initialize from "./methods/initialize.js";
 
 export const logger = create("C:/Git/odd-lsp/tmp.log");
@@ -35,8 +37,10 @@ const handlers: Readonly<
 	>
 > = {
 	initialize,
+	"textDocument/didOpen": didOpen,
 	"textDocument/completion": completion,
-	"textDocument/didChange": didChange
+	"textDocument/didChange": didChange,
+	"textDocument/diagnostic": diagnostic
 };
 
 const respond = (
