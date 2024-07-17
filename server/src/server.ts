@@ -3,7 +3,9 @@ import completion from "./methods/completion.js";
 import diagnostic from "./methods/diagnostic.js";
 import didChange from "./methods/did-change.js";
 import didOpen from "./methods/did-open.js";
+import exit from "./methods/exit.js";
 import initialize from "./methods/initialize.js";
+import shutdown from "./methods/shutdown.js";
 
 export const logger = create("C:/Git/odd-lsp/tmp.log");
 
@@ -37,6 +39,8 @@ const handlers: Readonly<
 	>
 > = {
 	initialize,
+	shutdown,
+	exit,
 	"textDocument/didOpen": didOpen,
 	"textDocument/completion": completion,
 	"textDocument/didChange": didChange,
